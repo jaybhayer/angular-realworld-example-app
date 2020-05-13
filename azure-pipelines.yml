@@ -22,9 +22,7 @@ steps:
   displayName: 'Install Dependencies'
 
 - script: |
-    npx ng build --prod
-    ls -l
-    cd dist
+    ng serve
     echo "Inside dist directory"
     ls -l
   displayName: 'Build'
