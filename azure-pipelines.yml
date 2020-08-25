@@ -18,6 +18,10 @@ steps:
 - script: |
     npm cache clean --force
     npm i
+    npm i --save-dev moment@2.24.0
+    npm install --save-dev ngx-bootstrap@5.2.0
+    ng build
+
     echo "Working directory"
     pwd
     echo "directory content"
