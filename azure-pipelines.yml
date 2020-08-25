@@ -39,4 +39,4 @@ steps:
     ResourceGroupName: 'RajnikantsRG'
     SlotName: 'production'
     packageForLinux: 'dist/'
-  displayName: 'Deploying the application'
+  displayName: 'Deploying the application to App Service'
