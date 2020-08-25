@@ -26,6 +26,6 @@ steps:
     echo "Working directory"
     pwd
     echo "directory content"
-    ls -l
+    ls -al
   displayName: 'Install Dependencies'
 
