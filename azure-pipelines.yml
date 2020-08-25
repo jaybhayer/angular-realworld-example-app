@@ -1,5 +1,6 @@
 # Node.js
 
+
 # Build a general Node.js project with npm.
 # Add steps that analyze code, save build artifacts, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
@@ -36,9 +37,9 @@ steps:
     ConnectionType: 'AzureRM'
     azureSubscription: 'Free Trial(1)(dfadb5eb-8b3f-4f7f-a9ce-27ca16e8a363)'
     appType: 'webApp'
-    WebAppName: 'angularpoc1'
+    WebAppName: 'SimpleAngularApp1'
     deployToSlotOrASE: true
     ResourceGroupName: 'RajnikantsRG'
     SlotName: 'production'
-    packageForLinux: 'dist/'
+    packageForLinux: 'dist'
   displayName: 'Deploying the application to Azure App Service.'
