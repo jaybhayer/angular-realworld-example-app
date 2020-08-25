@@ -18,6 +18,9 @@ steps:
 - script: |
     npm cache clean --force
     npm i
+    echo "Working directory"
+    pwd
+    echo "directory content"
     ls -l
   displayName: 'Install Dependencies'
 
