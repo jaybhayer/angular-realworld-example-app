@@ -21,9 +21,9 @@ steps:
     npm install --save-dev ngx-bootstrap@5.2.0
     ng build
 
-    echo "Working directory"
+    echo "Working directory."
     pwd
-    echo "directory content"
+    echo "directory content."
     ls -al
     echo "###########################Contents of the Dist folder are listed below##########################"
     cd dist && ls -l
