@@ -16,6 +16,7 @@ steps:
   displayName: 'Install Node.js'
 
 - script: |
+    npm install -g @angular/cli@latest
     npm cache clean --force
     npm i
     npm i --save-dev moment@2.24.0
