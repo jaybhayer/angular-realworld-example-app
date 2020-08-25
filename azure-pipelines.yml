@@ -1,0 +1,42 @@
+# Node.js
+
+# Build a general Node.js project with npm.
+# Add steps that analyze code, save build artifacts, deploy, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- task: NodeTool@0
+  inputs:
+    versionSpec: '12.x'
+  displayName: 'Install Node.js'
+
+- script: |
+    npm install -g @angular/cli@latest
+    npm cache clean --force
+    npm i
+    npm i --save-dev moment@2.24.0
+    npm install --save-dev ngx-bootstrap@5.2.0
+    ng build
+
+    echo "Working directory"
+    pwd
+    echo "directory content"
+    ls -al
+    echo "###########################Contents of the Dist folder are listed below##########################"
+    cd dist && ls -l
+  displayName: 'Install Dependencies'
+
+- task: AzureRmWebAppDeployment@4
+  inputs:
+    ConnectionType: 'AzureRM'
+    azureSubscription: 'Free Trial(1)(dfadb5eb-8b3f-4f7f-a9ce-27ca16e8a363)'
+    appType: 'webApp'
+    WebAppName: 'angularpoc1'
+    deployToSlotOrASE: true
+    ResourceGroupName: 'RajnikantsRG'
+    SlotName: 'production'
+    packageForLinux: 'dist/'
+  displayName: 'Deploying the application'
