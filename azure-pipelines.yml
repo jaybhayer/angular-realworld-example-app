@@ -41,5 +41,5 @@ steps:
     deployToSlotOrASE: true
     ResourceGroupName: 'RajnikantsRG'
     SlotName: 'production'
-    packageForLinux: 'dist/**'
+    packageForLinux: 'dist/'
   displayName: 'Deploying the application'
