@@ -27,5 +27,7 @@ steps:
     pwd
     echo "directory content"
     ls -al
+    echo "###########################Contents of the Dist folder are listed below##########################"
+    cd dist && ls -l
   displayName: 'Install Dependencies'
 
