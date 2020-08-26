@@ -34,15 +34,4 @@ steps:
     echo "###########################Contents of the Dist folder are listed below##########################"
   displayName: 'Install Dependencies'
 
-
-- task: SonarQubePrepare@4
-  inputs:
-    SonarQube: 'Extentia''s SonarQube'
-    scannerMode: 'CLI'
-    configMode: 'manual'
-    cliProjectKey: 'Azure-SonarQube-Angular'
-    cliProjectName: 'Azure-SonarQube-Angular'
-    cliSources: '.'
-
-- task: SonarQubeAnalyze@4
   
