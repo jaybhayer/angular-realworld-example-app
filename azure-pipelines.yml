@@ -43,15 +43,4 @@ steps:
     cliProjectKey: 'Azure-SonarQube-Angular'
     cliProjectName: 'Azure-SonarQube-Angular'
     cliSources: '.'
-
-- task: AzureRmWebAppDeployment@4
-  inputs:
-    ConnectionType: 'AzureRM'
-    azureSubscription: 'Free Trial(1)(dfadb5eb-8b3f-4f7f-a9ce-27ca16e8a363)'
-    appType: 'webApp'
-    WebAppName: 'SimpleAngularApp1'
-    deployToSlotOrASE: true
-    ResourceGroupName: 'RajnikantsRG'
-    SlotName: 'production'
-    packageForLinux: 'dist'
-  displayName: 'Deploying the application to Azure App Service.'
+  
