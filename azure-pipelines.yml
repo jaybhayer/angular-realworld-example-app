@@ -20,6 +20,8 @@ steps:
   displayName: 'Install Node.js'
 
 - script: |
+    apt-get -y install xorg xvfb gtk2-engines-pixbuf
+    apt-get -y install dbus-x11 xfonts-base xfonts-100dpi xfonts-75dpi xfonts-cyrillic xfonts-scalable
     npm install -g @angular/cli@latest
     npm cache clean --force
     npm i
