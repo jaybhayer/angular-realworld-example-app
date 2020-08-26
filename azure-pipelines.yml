@@ -31,5 +31,10 @@ steps:
   displayName: 'Install Dependencies'
 
 - script: 
+    ng build
+    pwd && ls -l
+  displayName: 'Building the application'
+
+- script: 
     ng test -- --watch=false --code-coverage --browsers=ChromeHeadless
   displayName: 'Running unit tests'
