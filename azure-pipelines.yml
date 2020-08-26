@@ -30,9 +30,10 @@ steps:
     npm install --save-dev handlebars@4.5.0
   displayName: 'Install Dependencies'
 
-- script: 
+- script: |
     ng build
-    pwd && ls -l
+    pwd 
+    ls -l
   displayName: 'Building the application'
 
 - script: 
