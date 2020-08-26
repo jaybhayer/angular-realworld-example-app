@@ -30,5 +30,5 @@ steps:
   displayName: 'Install Dependencies'
 
 - script: 
-    npm test -- --watch=false --code-coverage --browsers=ChromeHeadless
+    ng test -- --watch=false --code-coverage --browsers=ChromeHeadless
   displayName: 'Running unit tests'
