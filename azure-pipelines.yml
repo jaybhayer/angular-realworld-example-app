@@ -3,6 +3,7 @@
 
 
 
+
 # Build a general Node.js project with npm.
 # Add steps that analyze code, save build artifacts, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
@@ -24,8 +25,6 @@ steps:
     npm i
     npm i --save-dev moment@2.24.0
     npm install --save-dev ngx-bootstrap@5.2.0
-    ng build
-    ng test
 
     echo "Working directory."
     pwd
@@ -34,4 +33,12 @@ steps:
     echo "###########################Contents of the Dist folder are listed below##########################"
   displayName: 'Install Dependencies'
 
+- task: SonarQubePrepare@4
+  inputs:
+    SonarQube: 'Extentias-SonarQube'
+    scannerMode: 'CLI'
+    configMode: 'manual'
+    cliProjectKey: 'EMS-POC'
+    cliProjectName: 'EMS-POC'
+    cliSources: '.'
   
