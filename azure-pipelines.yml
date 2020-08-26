@@ -27,6 +27,7 @@ steps:
     npm i --save-dev moment@2.24.0
     npm install --save-dev ngx-bootstrap@5.2.0
     npm install --save-dev @angular-devkit/build-angular
+    npm install --save-dev handlebars@4.5.0
   displayName: 'Install Dependencies'
 
 - script: 
