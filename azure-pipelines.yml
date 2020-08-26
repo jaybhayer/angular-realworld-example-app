@@ -29,7 +29,7 @@ steps:
     echo "Working directory."
     pwd
     echo "directory content."
-    ls -al
+    ls -l
     echo "###########################Contents of the Dist folder are listed below##########################"
   displayName: 'Install Dependencies'
 
